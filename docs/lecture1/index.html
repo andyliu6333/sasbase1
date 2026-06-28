@@ -35,7 +35,7 @@
   </aside>
   <main class="main">
     <header class="topbar">
-      <span class="crumb">SAS Base · Summer 2026</span>
+      <span class="crumb">SAS Base </span>
       <div class="utility"><span class="pill">Course materials</span></div>
     </header>
     <section class="page">
@@ -44,11 +44,89 @@
       <p class="lead">Get comfortable with SAS Studio, the program editor, log, results, and output data.</p>
 
       <h2>Lesson resources</h2>
-      <div class="resources">
-        <div class="resource"><div><strong>Lesson 1 slides</strong><p>Replace this placeholder with your presentation or handout.</p></div><a class="tag" href="#">Slides ↗</a></div>
-        <div class="resource"><div><strong>Annotated notes</strong><p>Add a version with examples, explanations, or solutions.</p></div><a class="tag" href="#">Notes ↗</a></div>
-        <div class="resource"><div><strong>Practice lab</strong><p>Link your SAS Studio file, worksheet, or downloadable data.</p></div><a class="tag" href="#">Lab ↗</a></div>
-      </div>
+
+```html
+<section class="files-section">
+  <h2>Lecture 1 Files</h2>
+  <p>Click a file name to view or download it.</p>
+
+  <ul class="file-list">
+    <li><a href="./Base-1%20%E8%AE%B2%E4%B9%89.pdf" target="_blank">📄 Base-1 讲义.pdf</a></li>
+
+    <li><a href="./Email_data.csv" download>📊 Email_data.csv</a></li>
+
+    <li><a href="./base_lab-1.sas" download>💻 base_lab-1.sas</a></li>
+
+    <li><a href="./Lecture_2_homework_questions_with_sol.sas" download>
+      💻 Lecture 2 Homework Questions with Solution
+    </a></li>
+
+    <li><a href="./Lecture_2_in_class_questions_with_sol.sas" download>
+      💻 Lecture 2 In-Class Questions with Solution
+    </a></li>
+
+    <li><a href="./Lecture_3_homework_questions%20with%20sol.sas" download>
+      💻 Lecture 3 Homework Questions with Solution
+    </a></li>
+
+    <li><a href="./Lecture_3_in_class_questions%20with%20sol%20(1).sas" download>
+      💻 Lecture 3 In-Class Questions with Solution
+    </a></li>
+
+    <li><a href="./boston_house_train.csv" download>📊 boston_house_train.csv</a></li>
+
+    <li><a href="./boston_house_test.csv" download>📊 boston_house_test.csv</a></li>
+
+    <li><a href="./temp3.dat" download>📁 temp3.dat</a></li>
+  </ul>
+</section>
+
+<style>
+  .files-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  }
+
+  .files-section h2 {
+    margin-top: 0;
+  }
+
+  .file-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+
+  .file-list li {
+    margin: 10px 0;
+  }
+
+  .file-list a {
+    display: block;
+    padding: 14px 16px;
+    color: #1f5fbf;
+    text-decoration: none;
+    background: #f4f8ff;
+    border: 1px solid #d8e6ff;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .file-list a:hover {
+    background: #e7f0ff;
+    transform: translateY(-1px);
+  }
+</style>
+```
+
+
+
+
+      
 
       <h2>Learning outcomes</h2>
       <ul class="outcomes"><li>Explain the role of the DATA and PROC steps.</li><li>Identify errors, warnings, and notes in the SAS log.</li><li>Run a complete SAS program and save your work.</li></ul>
