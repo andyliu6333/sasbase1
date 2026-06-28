@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SAS Base course website">
+  <title>Lesson 4: Formats & functions | SAS Base</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="site-shell">
+  <aside class="sidebar" aria-label="Course navigation">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">SAS</span>
+      <span><strong>SAS Base</strong><small>Course Website · Summer 2026</small></span>
+    </a>
+    <div class="nav-label">Course</div>
+    <ul class="nav-list">
+      <li><a class="" href="../index.html">Home</a></li>
+      <li><a href="#course-info">Course information</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+    </ul>
+    <div class="nav-label">Lessons</div>
+    <ul class="nav-list">
+      <li><a class="" href="../lecture1/index.html">01 · SAS foundations</a></li>
+      <li><a class="" href="../lecture2/index.html">02 · Libraries & data sets</a></li>
+      <li><a class="" href="../lecture3/index.html">03 · DATA step</a></li>
+      <li><a class="active" href="../lecture4/index.html">04 · Formats & functions</a></li>
+      <li><a class="" href="../lecture5/index.html">05 · Sorting & merging</a></li>
+      <li><a class="" href="../lecture6/index.html">06 · PROC SQL</a></li>
+      <li><a class="" href="../lecture7/index.html">07 · Procedures & reports</a></li>
+      <li><a class="" href="../lecture8/index.html">08 · Macros & final project</a></li>
+    </ul>
+    <p class="sidebar-note"><strong>Instructor note:</strong><br>Replace all placeholder links with your own slides, recordings, worksheets, and LMS pages.</p>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <span class="crumb">SAS Base · Summer 2026</span>
+      <div class="utility"><span class="pill">Course materials</span></div>
+    </header>
+    <section class="page">
+      <div class="eyebrow">Lesson 4</div>
+      <h1>Formats & functions</h1>
+      <p class="lead">Turn raw values into readable variables using SAS functions, formats, and conditional logic.</p>
+
+      <h2>Lesson resources</h2>
+      <div class="resources">
+        <div class="resource"><div><strong>Lesson 4 slides</strong><p>Replace this placeholder with your presentation or handout.</p></div><a class="tag" href="#">Slides ↗</a></div>
+        <div class="resource"><div><strong>Annotated notes</strong><p>Add a version with examples, explanations, or solutions.</p></div><a class="tag" href="#">Notes ↗</a></div>
+        <div class="resource"><div><strong>Practice lab</strong><p>Link your SAS Studio file, worksheet, or downloadable data.</p></div><a class="tag" href="#">Lab ↗</a></div>
+      </div>
+
+      <h2>Learning outcomes</h2>
+      <ul class="outcomes"><li>Apply a format without changing the underlying value.</li><li>Use common character, numeric, and date functions.</li><li>Convert variables safely and check for missing values.</li></ul>
+
+      <h2>Example program</h2>
+      <pre class="code"><code>data work.dates;
+  input id date_text : $10.;
+  date_value = input(date_text, yymmdd10.);
+  format date_value date9.;
+datalines;
+101 2026-06-27
+;
+run;</code></pre>
+
+      <h2>Learning activity</h2>
+      <div class="callout"><strong>Practice:</strong> Import a short date field, create a SAS date value, and display it with a readable format.</div>
+
+      <h2>Before the next lesson</h2>
+      <p>Save a copy of your working code. Review the SAS log and make sure there are no unexpected errors or warnings before submitting any work.</p>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation"><a href="../lecture3/index.html">← Lesson 3</a><a href="../lecture5/index.html">Lesson 5 →</a></nav>
+    </section>
+  </main>
+</div>
+<footer class="footer">© <span data-year></span> SAS Base course website. Built for GitHub Pages.</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>

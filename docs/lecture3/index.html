@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SAS Base course website">
+  <title>Lesson 3: DATA step | SAS Base</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="site-shell">
+  <aside class="sidebar" aria-label="Course navigation">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">SAS</span>
+      <span><strong>SAS Base</strong><small>Course Website · Summer 2026</small></span>
+    </a>
+    <div class="nav-label">Course</div>
+    <ul class="nav-list">
+      <li><a class="" href="../index.html">Home</a></li>
+      <li><a href="#course-info">Course information</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+    </ul>
+    <div class="nav-label">Lessons</div>
+    <ul class="nav-list">
+      <li><a class="" href="../lecture1/index.html">01 · SAS foundations</a></li>
+      <li><a class="" href="../lecture2/index.html">02 · Libraries & data sets</a></li>
+      <li><a class="active" href="../lecture3/index.html">03 · DATA step</a></li>
+      <li><a class="" href="../lecture4/index.html">04 · Formats & functions</a></li>
+      <li><a class="" href="../lecture5/index.html">05 · Sorting & merging</a></li>
+      <li><a class="" href="../lecture6/index.html">06 · PROC SQL</a></li>
+      <li><a class="" href="../lecture7/index.html">07 · Procedures & reports</a></li>
+      <li><a class="" href="../lecture8/index.html">08 · Macros & final project</a></li>
+    </ul>
+    <p class="sidebar-note"><strong>Instructor note:</strong><br>Replace all placeholder links with your own slides, recordings, worksheets, and LMS pages.</p>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <span class="crumb">SAS Base · Summer 2026</span>
+      <div class="utility"><span class="pill">Course materials</span></div>
+    </header>
+    <section class="page">
+      <div class="eyebrow">Lesson 3</div>
+      <h1>DATA step</h1>
+      <p class="lead">Create a new analysis-ready table by selecting variables, filtering observations, and deriving columns.</p>
+
+      <h2>Lesson resources</h2>
+      <div class="resources">
+        <div class="resource"><div><strong>Lesson 3 slides</strong><p>Replace this placeholder with your presentation or handout.</p></div><a class="tag" href="#">Slides ↗</a></div>
+        <div class="resource"><div><strong>Annotated notes</strong><p>Add a version with examples, explanations, or solutions.</p></div><a class="tag" href="#">Notes ↗</a></div>
+        <div class="resource"><div><strong>Practice lab</strong><p>Link your SAS Studio file, worksheet, or downloadable data.</p></div><a class="tag" href="#">Lab ↗</a></div>
+      </div>
+
+      <h2>Learning outcomes</h2>
+      <ul class="outcomes"><li>Write a DATA step that reads an existing SAS table.</li><li>Use IF/THEN logic to create categories.</li><li>Use WHERE or IF correctly to filter observations.</li></ul>
+
+      <h2>Example program</h2>
+      <pre class="code"><code>data work.class_clean;
+  set sashelp.class;
+  bmi_proxy = weight / height**2 * 703;
+  if age >= 14 then age_group = 'Older';
+  else age_group = 'Younger';
+run;
+
+proc print data=work.class_clean;
+run;</code></pre>
+
+      <h2>Learning activity</h2>
+      <div class="callout"><strong>Practice:</strong> Build a cleaned version of SASHELP.CLASS. Add a derived variable and a two-level category, then verify the result with PROC PRINT.</div>
+
+      <h2>Before the next lesson</h2>
+      <p>Save a copy of your working code. Review the SAS log and make sure there are no unexpected errors or warnings before submitting any work.</p>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation"><a href="../lecture2/index.html">← Lesson 2</a><a href="../lecture4/index.html">Lesson 4 →</a></nav>
+    </section>
+  </main>
+</div>
+<footer class="footer">© <span data-year></span> SAS Base course website. Built for GitHub Pages.</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
